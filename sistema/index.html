@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Punto de Venta</title>
+
+	<link href="css/sb-admin-2.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+
+</head>
+
+<body id="page-top">
+	<div id="wrapper">
+
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+	<a class="sidebar-brand d-flex align-items-center justify-content-center" >
+		<div class="sidebar-brand-icon rotate-n-15">
+			<img src="img/logo_2.jpg" class="img-thumbnail">
+		</div>
+		<div class="sidebar-brand-text mx-3">Papelería</div>
+	</a>
+
+	<hr class="sidebar-divider my-0">
+
+	<hr class="sidebar-divider">
+
+	<div class="sidebar-heading">
+		<a align="right"> Menu </a>
+	</div>
+
+	<li class="nav-item">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+			<i class="fas fa-fw fa-cog"></i>
+			<span>Ventas</span>
+		</a>
+		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<a class="collapse-item" >Nueva venta</a>
+				<a class="collapse-item" >Ventas</a>
+			</div>
+		</div>
+	</li>
+	
+		<li class="nav-item">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+			<i class="fas fa-fw fa-wrench"></i>
+			<span>Productos</span>
+		</a>
+		<div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<a class="collapse-item" >Nuevo Producto</a>
+				<a class="collapse-item" >Productos</a>
+			</div>
+		</div>
+	</li>
+	
+</ul>		<div id="content-wrapper" class="d-flex flex-column">
+
+			<div id="content">
+				<nav class="navbar navbar-expand navbar-light bg-primary text-white topbar mb-4 static-top shadow">
+
+					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+						<i class="fa fa-bars"></i>
+					</button>
+					<div class="input-group">
+						<!--<h6>Sistema de Venta</h6>-->
+						<p class="ml-auto"><strong>México, </strong>15 de Marzo de 2022</p>
+					</div>
+
+					
+					<ul class="navbar-nav ml-auto">
+
+						<div class="topbar-divider d-none d-sm-block"></div>
+
+						
+						<li class="nav-item dropdown no-arrow">
+							<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="mr-2 d-none d-lg-inline small text-white">Juan López</span>
+							</a>
+							
+							<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+								<a class="dropdown-item" href="#">
+									<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+									admin@gmail.com								</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" >
+									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+									Salir
+								</a>
+							</div>
+						</li>
+
+					</ul>
+
+				</nav>
+
+<div class="container-fluid">
+
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">Menú Principal</h1>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-6">
+			<div class="card">
+				<div class="card-header bg-primary text-white">
+					Información Personal
+				</div>
+				<div class="card-body">
+					<div class="form-group">
+						<label>Nombre: <strong>Juan López</strong></label>
+					</div>
+					<div class="form-group">
+						<label>Correo: <strong>admin@gmail.com</strong></label>
+					</div>
+					<div class="form-group">
+						<label>Rol: <strong>Administrador</strong></label>
+					</div>
+					<div class="form-group">
+						<label>Usuario: <strong>admin</strong></label>
+					</div>
+				</div>
+			</div>
+		</div>
+					<div class="col-lg-6">
+				<div class="card">
+					<div class="card-header bg-primary text-white">
+						Datos de la Empresa
+					</div>
+					<div class="card-body">
+						<form method="post" id="frmEmpresa" class="p-3">
+							<div class="form-group">
+								<label><strong>RFC:</strong></label>
+								<input type="text" name="txtDni" value="71347267" id="txtDni" placeholder="RFC de la Empresa" required class="form-control">
+							</div>
+							<div class="form-group">
+								<label><strong>Nombre:</strong></label>
+								<input type="text" name="txtNombre" class="form-control" value="Mi Papelería" id="txtNombre" placeholder="Nombre de la Empresa" required class="form-control">
+							</div>
+							<div class="form-group">
+								<label><strong>Eslogan:</strong></label>
+								<input type="text" name="txtRSocial" class="form-control" value="Los mejores precios!" id="txtRSocial" placeholder="Eslogan de la Empresa">
+							</div>
+							<div class="form-group">
+								<label><strong>Teléfono:</strong></label>
+								<input type="text" name="txtTelEmpresa" class="form-control" value="925491523" id="txtTelEmpresa" placeholder="Teléfono de la Empresa" required>
+							</div>
+							<div class="form-group">
+								<label><strong>Correo Electrónico:</strong></label>
+								<input type="email" name="txtEmailEmpresa" class="form-control" value="mi_papeleria@store.com" id="txtEmailEmpresa" placeholder="Correo de la Empresa" required>
+							</div>
+							<div class="form-group">
+								<label><strong>Dirección:</strong></label>
+								<input type="text" name="txtDirEmpresa" class="form-control" value="Cuautla Morelos" id="txtDirEmpresa" placeholder="Direción de la Empresa" required>
+							</div>
+							<div>
+								<button type="submit" class="btn btn-primary btnChangePass"><i class="fas fa-save"></i> Guardar Datos</button>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+			</div>
+
+
+</div>
+
+</div>
+
+
+<footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+    <div class="copyright text-center my-auto">
+      <span>Copyright &copy; Mi Papelería 2022</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+</div>
+
+<a class="scroll-to-top rounded" href="#page-top">
+  <i class="fas fa-angle-up"></i>
+</a>
+
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Desea salir?</h5>
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">Selecciona logout para terminar la sesión</div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+        <a class="btn btn-primary" >Salir</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JavaScript-->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/all.min.js"></script>
+
+<script src="js/sb-admin-2.min.js"></script>
+<script src="js/jquery.dataTables.min.js"></script>
+<script src="js/dataTables.bootstrap4.min.js"></script>
+<script src="js/sweetalert2@10.js"></script>
+<script type="text/javascript" src="js/producto.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#table').DataTable();
+    var usuarioid = '1';
+    searchForDetalle(usuarioid);
+  });
+</script>
+
+</body>
+
+</html>
